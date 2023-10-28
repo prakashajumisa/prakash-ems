@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ems-frontend
+spec:
+  replicas: 3  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: ems-frontend
+  template:
+    metadata:
+      labels:
+        app: ems-frontend
+    spec:
+      containers:
+      - name: ems-frontend
+        image: prakashvelusamy1999/ems-ops:front_v11
+        # env:
+        #   - name: employeeBaseRestApiUrl
+        #     value: 'http://ems-backend:8080/api/v1/employees'
+        ports:
+        - containerPort: 3000
