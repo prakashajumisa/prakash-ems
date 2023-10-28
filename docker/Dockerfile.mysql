@@ -1,0 +1,10 @@
+# Use the official MySQL image as the base image
+FROM mysql:8
+
+# Environment variables to set the root password and create an initial database
+ENV MYSQL_ROOT_PASSWORD=ems_ops
+ENV MYSQL_DATABASE=ems_ops
+
+# Expose the MySQL port
+EXPOSE 3306
+

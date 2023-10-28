@@ -1,0 +1,7 @@
+FROM node:14
+WORKDIR /react-hooks-frontend/
+COPY /react-hooks-frontend/ /react-hooks-frontend
+RUN npm install 
+EXPOSE 3000
+# ENV employeeBaseRestApiUrl='http://backend-service:8080/api/v1/employees'
+ENTRYPOINT ["npm","start"]
